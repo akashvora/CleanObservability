@@ -22,3 +22,4 @@ CleanObservability.Demo/docker/positions.yaml
 *.pfx
 *.key
 /CleanObservability.Demo/Logs/2025/log-2025-07-03.txt
+/structure.txt
