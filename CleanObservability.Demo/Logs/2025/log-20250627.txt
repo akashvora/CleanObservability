@@ -1,0 +1,23 @@
+2025-06-27 19:29:30.989 +05:30 [Information] User profile is available. Using '"C:\Users\akash\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-27 19:29:31.505 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/""" - null null
+2025-06-27 19:29:31.568 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2025-06-27 19:29:31.568 +05:30 [Information] Hosting environment: "Development"
+2025-06-27 19:29:31.568 +05:30 [Information] Content root path: "D:\CleanObservability\CleanObservability.Demo"
+2025-06-27 19:29:31.619 +05:30 [Information] Executing endpoint '"HTTP: GET /"'
+2025-06-27 19:29:31.625 +05:30 [Information] Executing RedirectResult, redirecting to "/swagger".
+2025-06-27 19:29:31.626 +05:30 [Information] Executed endpoint '"HTTP: GET /"'
+2025-06-27 19:29:31.627 +05:30 [Information] HTTP "GET" "/" responded 302 in 24.0736 ms
+2025-06-27 19:29:31.657 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/index.html""" - null null
+2025-06-27 19:29:31.657 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/""" - 302 null null 157.9926ms
+2025-06-27 19:29:31.705 +05:30 [Information] HTTP "GET" "/swagger/index.html" responded 200 in 44.4961 ms
+2025-06-27 19:29:31.706 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 49.2557ms
+2025-06-27 19:29:31.710 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-06-27 19:29:31.712 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/_vs/browserLink""" - null null
+2025-06-27 19:29:31.715 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/_framework/aspnetcore-browser-refresh.js""" - 200 16531 "application/javascript; charset=utf-8" 5.2716ms
+2025-06-27 19:29:31.801 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/v1/swagger.json""" - null null
+2025-06-27 19:29:31.801 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 89.0408ms
+2025-06-27 19:29:31.866 +05:30 [Information] HTTP "GET" "/swagger/v1/swagger.json" responded 200 in 63.5753 ms
+2025-06-27 19:29:31.867 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 65.946ms
+2025-06-27 19:29:41.306 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - null null
+2025-06-27 19:29:41.308 +05:30 [Information] Executing endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-27 19:29:41.351 +05:30 [Information] Route matched with "{action = \"GetLatestLogs\", controller = \"Hello\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetLatestLogs()" on controller "CleanObservability.Demo.Controllers.HelloController" ("CleanObservability.Demo").

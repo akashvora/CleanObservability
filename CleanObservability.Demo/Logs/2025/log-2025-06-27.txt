@@ -1,0 +1,612 @@
+2025-06-27 19:41:16.436 +05:30 [Information] User profile is available. Using '"C:\Users\akash\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-27 19:41:16.990 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/""" - null null
+2025-06-27 19:41:17.009 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2025-06-27 19:41:17.009 +05:30 [Information] Hosting environment: "Development"
+2025-06-27 19:41:17.010 +05:30 [Information] Content root path: "D:\CleanObservability\CleanObservability.Demo"
+2025-06-27 19:41:17.066 +05:30 [Information] Executing endpoint '"HTTP: GET /"'
+2025-06-27 19:41:17.072 +05:30 [Information] Executing RedirectResult, redirecting to "/swagger".
+2025-06-27 19:41:17.073 +05:30 [Information] Executed endpoint '"HTTP: GET /"'
+2025-06-27 19:41:17.074 +05:30 [Information] HTTP "GET" "/" responded 302 in 22.1137 ms
+2025-06-27 19:41:17.098 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/""" - 302 null null 112.0578ms
+2025-06-27 19:41:17.103 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/index.html""" - null null
+2025-06-27 19:41:17.186 +05:30 [Information] HTTP "GET" "/swagger/index.html" responded 200 in 80.4786 ms
+2025-06-27 19:41:17.187 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 84.9946ms
+2025-06-27 19:41:17.200 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-06-27 19:41:17.207 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/_framework/aspnetcore-browser-refresh.js""" - 200 16531 "application/javascript; charset=utf-8" 3.8634ms
+2025-06-27 19:41:17.208 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/_vs/browserLink""" - null null
+2025-06-27 19:41:17.261 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/v1/swagger.json""" - null null
+2025-06-27 19:41:17.261 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 53.9131ms
+2025-06-27 19:41:17.321 +05:30 [Information] HTTP "GET" "/swagger/v1/swagger.json" responded 200 in 57.6324 ms
+2025-06-27 19:41:17.321 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 60.2789ms
+2025-06-27 19:41:57.376 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - null null
+2025-06-27 19:41:57.384 +05:30 [Information] Executing endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-27 19:41:57.406 +05:30 [Information] Route matched with "{action = \"GetLatestLogs\", controller = \"Hello\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetLatestLogs()" on controller "CleanObservability.Demo.Controllers.HelloController" ("CleanObservability.Demo").
+2025-06-27 19:42:00.169 +05:30 [Information] Executed action "CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)" in 2757.579ms
+2025-06-27 19:42:00.170 +05:30 [Information] Executed endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-27 19:42:00.188 +05:30 [Error] Unhandled exception caught: "Could not find file 'D:\CleanObservability\CleanObservability.Demo\Logs\log-2025-06-27.txt'."
+System.IO.FileNotFoundException: Could not find file 'D:\CleanObservability\CleanObservability.Demo\Logs\log-2025-06-27.txt'.
+File name: 'D:\CleanObservability\CleanObservability.Demo\Logs\log-2025-06-27.txt'
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+   at System.IO.File.ReadAllText(String path, Encoding encoding)
+   at CleanObservability.Demo.Controllers.HelloController.GetLatestLogs() in D:\CleanObservability\CleanObservability.Demo\Controllers\HelloController.cs:line 50
+   at lambda_method7(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at CleanObservability.WebAPI.Middleware.GlobalExceptionMiddleware.Invoke(HttpContext context) in D:\CleanObservability\CleanObservability.Demo\Middlewares\GlobalExceptionMiddleware.cs:line 22
+2025-06-27 19:42:00.209 +05:30 [Information] HTTP "GET" "/Hello/logs/latest" responded 404 in 2825.2657 ms
+2025-06-27 19:42:00.221 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - 404 null "application/json" 2845.1529ms
+2025-06-27 19:42:20.852 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - null null
+2025-06-27 19:42:20.854 +05:30 [Information] Executing endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-27 19:42:20.854 +05:30 [Information] Route matched with "{action = \"GetLatestLogs\", controller = \"Hello\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetLatestLogs()" on controller "CleanObservability.Demo.Controllers.HelloController" ("CleanObservability.Demo").
+2025-06-27 19:43:35.022 +05:30 [Information] Executed action "CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)" in 74167.0595ms
+2025-06-27 19:43:35.025 +05:30 [Information] Executed endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-27 19:43:35.087 +05:30 [Error] Unhandled exception caught: "Could not find file 'D:\CleanObservability\CleanObservability.Demo\Logs\log-2025-06-27.txt'."
+System.IO.FileNotFoundException: Could not find file 'D:\CleanObservability\CleanObservability.Demo\Logs\log-2025-06-27.txt'.
+File name: 'D:\CleanObservability\CleanObservability.Demo\Logs\log-2025-06-27.txt'
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+   at System.IO.File.ReadAllText(String path, Encoding encoding)
+   at CleanObservability.Demo.Controllers.HelloController.GetLatestLogs()
+   at lambda_method7(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at CleanObservability.WebAPI.Middleware.GlobalExceptionMiddleware.Invoke(HttpContext context)
+2025-06-27 19:43:35.132 +05:30 [Information] HTTP "GET" "/Hello/logs/latest" responded 404 in 74277.9109 ms
+2025-06-27 19:43:35.132 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - 404 null "application/json" 74280.3181ms
+2025-06-27 19:43:44.246 +05:30 [Information] User profile is available. Using '"C:\Users\akash\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-27 19:43:44.625 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/""" - null null
+2025-06-27 19:43:44.639 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2025-06-27 19:43:44.640 +05:30 [Information] Hosting environment: "Development"
+2025-06-27 19:43:44.640 +05:30 [Information] Content root path: "D:\CleanObservability\CleanObservability.Demo"
+2025-06-27 19:43:44.694 +05:30 [Information] Executing endpoint '"HTTP: GET /"'
+2025-06-27 19:43:44.703 +05:30 [Information] Executing RedirectResult, redirecting to "/swagger".
+2025-06-27 19:43:44.704 +05:30 [Information] Executed endpoint '"HTTP: GET /"'
+2025-06-27 19:43:44.710 +05:30 [Information] HTTP "GET" "/" responded 302 in 27.5362 ms
+2025-06-27 19:43:44.737 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/""" - 302 null null 118.7653ms
+2025-06-27 19:43:44.742 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/index.html""" - null null
+2025-06-27 19:43:44.788 +05:30 [Information] HTTP "GET" "/swagger/index.html" responded 200 in 41.1467 ms
+2025-06-27 19:43:44.799 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 57.5878ms
+2025-06-27 19:43:44.799 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-06-27 19:43:44.799 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/_vs/browserLink""" - null null
+2025-06-27 19:43:44.807 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/_framework/aspnetcore-browser-refresh.js""" - 200 16531 "application/javascript; charset=utf-8" 3.2847ms
+2025-06-27 19:43:44.834 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 35.1887ms
+2025-06-27 19:43:44.851 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/v1/swagger.json""" - null null
+2025-06-27 19:43:44.904 +05:30 [Information] HTTP "GET" "/swagger/v1/swagger.json" responded 200 in 51.8318 ms
+2025-06-27 19:43:44.905 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 53.6928ms
+2025-06-27 19:43:50.895 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - null null
+2025-06-27 19:43:50.897 +05:30 [Information] Executing endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-27 19:43:51.087 +05:30 [Information] Route matched with "{action = \"GetLatestLogs\", controller = \"Hello\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetLatestLogs()" on controller "CleanObservability.Demo.Controllers.HelloController" ("CleanObservability.Demo").
+2025-06-27 19:44:28.444 +05:30 [Information] Executed action "CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)" in 37340.4318ms
+2025-06-27 19:44:28.445 +05:30 [Information] Executed endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-27 19:44:28.504 +05:30 [Error] Unhandled exception caught: "The process cannot access the file 'D:\CleanObservability\CleanObservability.Demo\Logs\2025\log-2025-06-27.txt' because it is being used by another process."
+System.IO.IOException: The process cannot access the file 'D:\CleanObservability\CleanObservability.Demo\Logs\2025\log-2025-06-27.txt' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+   at System.IO.File.ReadAllText(String path, Encoding encoding)
+   at CleanObservability.Demo.Controllers.HelloController.GetLatestLogs() in D:\CleanObservability\CleanObservability.Demo\Controllers\HelloController.cs:line 50
+   at lambda_method7(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at CleanObservability.WebAPI.Middleware.GlobalExceptionMiddleware.Invoke(HttpContext context) in D:\CleanObservability\CleanObservability.Demo\Middlewares\GlobalExceptionMiddleware.cs:line 22
+2025-06-27 19:44:28.560 +05:30 [Error] HTTP "GET" "/Hello/logs/latest" responded 500 in 37662.9326 ms
+2025-06-27 19:44:28.560 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - 500 null "application/json" 37665.2336ms
+2025-06-27 19:48:13.195 +05:30 [Information] User profile is available. Using '"C:\Users\akash\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-27 19:48:13.835 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/""" - null null
+2025-06-27 19:48:13.860 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2025-06-27 19:48:13.860 +05:30 [Information] Hosting environment: "Development"
+2025-06-27 19:48:13.860 +05:30 [Information] Content root path: "D:\CleanObservability\CleanObservability.Demo"
+2025-06-27 19:48:14.053 +05:30 [Information] Executing endpoint '"HTTP: GET /"'
+2025-06-27 19:48:14.064 +05:30 [Information] Executing RedirectResult, redirecting to "/swagger".
+2025-06-27 19:48:14.064 +05:30 [Information] Executed endpoint '"HTTP: GET /"'
+2025-06-27 19:48:14.067 +05:30 [Information] HTTP "GET" "/" responded 302 in 41.9293 ms
+2025-06-27 19:48:14.108 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/""" - 302 null null 281.9749ms
+2025-06-27 19:48:14.111 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/index.html""" - null null
+2025-06-27 19:48:14.189 +05:30 [Information] HTTP "GET" "/swagger/index.html" responded 200 in 70.5317 ms
+2025-06-27 19:48:14.229 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 82.8033ms
+2025-06-27 19:48:14.230 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-06-27 19:48:14.230 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/_vs/browserLink""" - null null
+2025-06-27 19:48:14.236 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/_framework/aspnetcore-browser-refresh.js""" - 200 16531 "application/javascript; charset=utf-8" 5.0789ms
+2025-06-27 19:48:14.309 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/v1/swagger.json""" - null null
+2025-06-27 19:48:14.309 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 78.8438ms
+2025-06-27 19:48:14.397 +05:30 [Information] HTTP "GET" "/swagger/v1/swagger.json" responded 200 in 84.9999 ms
+2025-06-27 19:48:14.398 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 89.5684ms
+2025-06-27 19:48:29.061 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - null null
+2025-06-27 19:48:29.065 +05:30 [Information] Executing endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-27 19:48:29.106 +05:30 [Information] Route matched with "{action = \"GetLatestLogs\", controller = \"Hello\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetLatestLogs()" on controller "CleanObservability.Demo.Controllers.HelloController" ("CleanObservability.Demo").
+2025-06-27 19:48:29.187 +05:30 [Information] Executed action "CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)" in 71.4966ms
+2025-06-27 19:48:29.190 +05:30 [Information] Executed endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-27 19:48:29.306 +05:30 [Error] Unhandled exception caught: "No file provider has been configured to process the supplied file."
+System.InvalidOperationException: No file provider has been configured to process the supplied file.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.VirtualFileResultExecutor.GetFileInformation(VirtualFileResult result, IWebHostEnvironment hostingEnvironment)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.VirtualFileResultExecutor.ExecuteAsync(ActionContext context, VirtualFileResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at CleanObservability.WebAPI.Middleware.GlobalExceptionMiddleware.Invoke(HttpContext context) in D:\CleanObservability\CleanObservability.Demo\Middlewares\GlobalExceptionMiddleware.cs:line 22
+2025-06-27 19:48:29.353 +05:30 [Error] HTTP "GET" "/Hello/logs/latest" responded 500 in 287.8007 ms
+2025-06-27 19:48:29.356 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - 500 null "application/json" 295.3638ms
+2025-06-27 19:52:49.769 +05:30 [Information] User profile is available. Using '"C:\Users\akash\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-27 19:52:49.996 +05:30 [Warning] The WebRootPath was not found: "D:\CleanObservability\CleanObservability.Demo\wwwroot". Static files may be unavailable.
+2025-06-27 19:52:50.110 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/""" - null null
+2025-06-27 19:52:50.132 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2025-06-27 19:52:50.132 +05:30 [Information] Hosting environment: "Development"
+2025-06-27 19:52:50.132 +05:30 [Information] Content root path: "D:\CleanObservability\CleanObservability.Demo"
+2025-06-27 19:52:50.193 +05:30 [Information] Executing endpoint '"HTTP: GET /"'
+2025-06-27 19:52:50.204 +05:30 [Information] Executing RedirectResult, redirecting to "/swagger".
+2025-06-27 19:52:50.204 +05:30 [Information] Executed endpoint '"HTTP: GET /"'
+2025-06-27 19:52:50.207 +05:30 [Information] HTTP "GET" "/" responded 302 in 30.2166 ms
+2025-06-27 19:52:50.245 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/index.html""" - null null
+2025-06-27 19:52:50.246 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/""" - 302 null null 141.2256ms
+2025-06-27 19:52:50.314 +05:30 [Information] HTTP "GET" "/swagger/index.html" responded 200 in 60.2873 ms
+2025-06-27 19:52:50.317 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 73.0841ms
+2025-06-27 19:52:50.330 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/_vs/browserLink""" - null null
+2025-06-27 19:52:50.332 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-06-27 19:52:50.338 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/_framework/aspnetcore-browser-refresh.js""" - 200 16531 "application/javascript; charset=utf-8" 7.4541ms
+2025-06-27 19:52:50.389 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 59.0756ms
+2025-06-27 19:52:50.412 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/v1/swagger.json""" - null null
+2025-06-27 19:52:50.491 +05:30 [Information] HTTP "GET" "/swagger/v1/swagger.json" responded 200 in 74.8836 ms
+2025-06-27 19:52:50.491 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 79.1675ms
+2025-06-27 19:53:04.495 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - null null
+2025-06-27 19:53:04.504 +05:30 [Information] Executing endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-27 19:53:04.542 +05:30 [Information] Route matched with "{action = \"GetLatestLogs\", controller = \"Hello\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetLatestLogs()" on controller "CleanObservability.Demo.Controllers.HelloController" ("CleanObservability.Demo").
+2025-06-27 19:53:04.628 +05:30 [Information] Executed action "CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)" in 75.1132ms
+2025-06-27 19:53:04.634 +05:30 [Information] Executed endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-27 19:53:04.784 +05:30 [Error] Unhandled exception caught: "No file provider has been configured to process the supplied file."
+System.InvalidOperationException: No file provider has been configured to process the supplied file.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.VirtualFileResultExecutor.GetFileInformation(VirtualFileResult result, IWebHostEnvironment hostingEnvironment)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.VirtualFileResultExecutor.ExecuteAsync(ActionContext context, VirtualFileResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at CleanObservability.WebAPI.Middleware.GlobalExceptionMiddleware.Invoke(HttpContext context) in D:\CleanObservability\CleanObservability.Demo\Middlewares\GlobalExceptionMiddleware.cs:line 22
+2025-06-27 19:53:04.831 +05:30 [Error] HTTP "GET" "/Hello/logs/latest" responded 500 in 329.0139 ms
+2025-06-27 19:53:04.832 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - 500 null "application/json" 337.9952ms
+2025-06-27 20:03:34.584 +05:30 [Information] User profile is available. Using '"C:\Users\akash\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-27 20:03:35.076 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/""" - null null
+2025-06-27 20:03:35.106 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2025-06-27 20:03:35.107 +05:30 [Information] Hosting environment: "Development"
+2025-06-27 20:03:35.107 +05:30 [Information] Content root path: "D:\CleanObservability\CleanObservability.Demo"
+2025-06-27 20:03:35.241 +05:30 [Information] Executing endpoint '"HTTP: GET /"'
+2025-06-27 20:03:35.254 +05:30 [Information] Executing RedirectResult, redirecting to "/swagger".
+2025-06-27 20:03:35.255 +05:30 [Information] Executed endpoint '"HTTP: GET /"'
+2025-06-27 20:03:35.258 +05:30 [Information] HTTP "GET" "/" responded 302 in 51.4044 ms
+2025-06-27 20:03:35.295 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/index.html""" - null null
+2025-06-27 20:03:35.296 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/""" - 302 null null 227.6235ms
+2025-06-27 20:03:35.353 +05:30 [Information] HTTP "GET" "/swagger/index.html" responded 200 in 53.8728 ms
+2025-06-27 20:03:35.355 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 60.7159ms
+2025-06-27 20:03:35.364 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-06-27 20:03:35.373 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/_framework/aspnetcore-browser-refresh.js""" - 200 16531 "application/javascript; charset=utf-8" 8.2512ms
+2025-06-27 20:03:35.376 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/_vs/browserLink""" - null null
+2025-06-27 20:03:35.429 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 52.4555ms
+2025-06-27 20:03:35.459 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/v1/swagger.json""" - null null
+2025-06-27 20:03:35.542 +05:30 [Information] HTTP "GET" "/swagger/v1/swagger.json" responded 200 in 77.9133 ms
+2025-06-27 20:03:35.542 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 82.9022ms
+2025-06-27 20:03:44.449 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - null null
+2025-06-27 20:03:44.455 +05:30 [Information] Executing endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-27 20:03:44.499 +05:30 [Information] Route matched with "{action = \"GetLatestLogs\", controller = \"Hello\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetLatestLogs()" on controller "CleanObservability.Demo.Controllers.HelloController" ("CleanObservability.Demo").
+2025-06-27 20:03:44.582 +05:30 [Information] Executing "FileContentResult", sending file with download name '""' ...
+2025-06-27 20:03:44.603 +05:30 [Information] Executed action "CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)" in 95.3546ms
+2025-06-27 20:03:44.604 +05:30 [Information] Executed endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-27 20:03:44.604 +05:30 [Information] HTTP "GET" "/Hello/logs/latest" responded 200 in 148.8997 ms
+2025-06-27 20:03:44.605 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - 200 37120 "text/plain" 155.948ms
+2025-06-27 20:08:55.551 +05:30 [Information] User profile is available. Using '"C:\Users\akash\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-27 20:08:55.922 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/""" - null null
+2025-06-27 20:08:55.950 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2025-06-27 20:08:55.950 +05:30 [Information] Hosting environment: "Development"
+2025-06-27 20:08:55.950 +05:30 [Information] Content root path: "D:\CleanObservability\CleanObservability.Demo"
+2025-06-27 20:08:56.029 +05:30 [Information] Executing endpoint '"HTTP: GET /"'
+2025-06-27 20:08:56.038 +05:30 [Information] Executing RedirectResult, redirecting to "/swagger".
+2025-06-27 20:08:56.038 +05:30 [Information] Executed endpoint '"HTTP: GET /"'
+2025-06-27 20:08:56.040 +05:30 [Information] HTTP "GET" "/" responded 302 in 27.5437 ms
+2025-06-27 20:08:56.071 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/index.html""" - null null
+2025-06-27 20:08:56.073 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/""" - 302 null null 157.1207ms
+2025-06-27 20:08:56.123 +05:30 [Information] HTTP "GET" "/swagger/index.html" responded 200 in 46.5617 ms
+2025-06-27 20:08:56.157 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 54.014ms
+2025-06-27 20:08:56.158 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-06-27 20:08:56.158 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/_vs/browserLink""" - null null
+2025-06-27 20:08:56.202 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/_framework/aspnetcore-browser-refresh.js""" - 200 16531 "application/javascript; charset=utf-8" 4.071ms
+2025-06-27 20:08:56.249 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 90.7781ms
+2025-06-27 20:08:56.288 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/v1/swagger.json""" - null null
+2025-06-27 20:08:56.411 +05:30 [Information] HTTP "GET" "/swagger/v1/swagger.json" responded 200 in 118.9926 ms
+2025-06-27 20:08:56.412 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 130.2852ms
+2025-06-27 20:09:20.454 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - null null
+2025-06-27 20:09:20.460 +05:30 [Information] Executing endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-27 20:09:20.499 +05:30 [Information] Route matched with "{action = \"GetLatestLogs\", controller = \"Hello\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetLatestLogs()" on controller "CleanObservability.Demo.Controllers.HelloController" ("CleanObservability.Demo").
+2025-06-27 20:09:20.575 +05:30 [Information] Executed action "CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)" in 66.3601ms
+2025-06-27 20:09:20.577 +05:30 [Information] Executed endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-27 20:09:20.680 +05:30 [Error] Unhandled exception caught: "No file provider has been configured to process the supplied file."
+System.InvalidOperationException: No file provider has been configured to process the supplied file.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.VirtualFileResultExecutor.GetFileInformation(VirtualFileResult result, IWebHostEnvironment hostingEnvironment)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.VirtualFileResultExecutor.ExecuteAsync(ActionContext context, VirtualFileResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at CleanObservability.WebAPI.Middleware.GlobalExceptionMiddleware.Invoke(HttpContext context) in D:\CleanObservability\CleanObservability.Demo\Middlewares\GlobalExceptionMiddleware.cs:line 22
+2025-06-27 20:09:20.728 +05:30 [Error] HTTP "GET" "/Hello/logs/latest" responded 500 in 268.4713 ms
+2025-06-27 20:09:20.729 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - 500 null "application/json" 274.8272ms
+2025-06-27 20:13:24.463 +05:30 [Information] User profile is available. Using '"C:\Users\akash\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-27 20:13:25.038 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/""" - null null
+2025-06-27 20:13:25.054 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2025-06-27 20:13:25.054 +05:30 [Information] Hosting environment: "Development"
+2025-06-27 20:13:25.054 +05:30 [Information] Content root path: "D:\CleanObservability\CleanObservability.Demo"
+2025-06-27 20:13:25.258 +05:30 [Information] Executing endpoint '"HTTP: GET /"'
+2025-06-27 20:13:25.268 +05:30 [Information] Executing RedirectResult, redirecting to "/swagger".
+2025-06-27 20:13:25.269 +05:30 [Information] Executed endpoint '"HTTP: GET /"'
+2025-06-27 20:13:25.273 +05:30 [Information] HTTP "GET" "/" responded 302 in 37.8489 ms
+2025-06-27 20:13:25.322 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/index.html""" - null null
+2025-06-27 20:13:25.322 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/""" - 302 null null 293.2789ms
+2025-06-27 20:13:25.394 +05:30 [Information] HTTP "GET" "/swagger/index.html" responded 200 in 66.3219 ms
+2025-06-27 20:13:25.397 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 76.9753ms
+2025-06-27 20:13:25.439 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-06-27 20:13:25.439 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/_vs/browserLink""" - null null
+2025-06-27 20:13:25.444 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/_framework/aspnetcore-browser-refresh.js""" - 200 16531 "application/javascript; charset=utf-8" 5.1063ms
+2025-06-27 20:13:25.480 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 41.5269ms
+2025-06-27 20:13:25.503 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/v1/swagger.json""" - null null
+2025-06-27 20:13:25.576 +05:30 [Information] HTTP "GET" "/swagger/v1/swagger.json" responded 200 in 71.1365 ms
+2025-06-27 20:13:25.577 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 73.5509ms
+2025-06-27 20:13:38.462 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - null null
+2025-06-27 20:13:38.467 +05:30 [Information] Executing endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-27 20:13:38.504 +05:30 [Information] Route matched with "{action = \"GetLatestLogs\", controller = \"Hello\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetLatestLogs()" on controller "CleanObservability.Demo.Controllers.HelloController" ("CleanObservability.Demo").
+2025-06-27 20:13:38.571 +05:30 [Information] Executed action "CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)" in 58.2825ms
+2025-06-27 20:13:38.573 +05:30 [Information] Executed endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-27 20:13:38.631 +05:30 [Error] Unhandled exception caught: "No file provider has been configured to process the supplied file."
+System.InvalidOperationException: No file provider has been configured to process the supplied file.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.VirtualFileResultExecutor.GetFileInformation(VirtualFileResult result, IWebHostEnvironment hostingEnvironment)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.VirtualFileResultExecutor.ExecuteAsync(ActionContext context, VirtualFileResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at CleanObservability.WebAPI.Middleware.GlobalExceptionMiddleware.Invoke(HttpContext context) in D:\CleanObservability\CleanObservability.Demo\Middlewares\GlobalExceptionMiddleware.cs:line 22
+2025-06-27 20:13:38.658 +05:30 [Error] HTTP "GET" "/Hello/logs/latest" responded 500 in 191.4809 ms
+2025-06-27 20:13:38.660 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - 500 null "application/json" 198.0207ms
+2025-06-28 00:54:35.157 +05:30 [Information] User profile is available. Using '"C:\Users\akash\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-28 00:54:35.742 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/""" - null null
+2025-06-28 00:54:35.771 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2025-06-28 00:54:35.771 +05:30 [Information] Hosting environment: "Development"
+2025-06-28 00:54:35.771 +05:30 [Information] Content root path: "D:\CleanObservability\CleanObservability.Demo"
+2025-06-28 00:54:35.827 +05:30 [Information] Executing endpoint '"HTTP: GET /"'
+2025-06-28 00:54:35.837 +05:30 [Information] Executing RedirectResult, redirecting to "/swagger".
+2025-06-28 00:54:35.837 +05:30 [Information] Executed endpoint '"HTTP: GET /"'
+2025-06-28 00:54:35.840 +05:30 [Information] HTTP "GET" "/" responded 302 in 37.1592 ms
+2025-06-28 00:54:35.879 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/index.html""" - null null
+2025-06-28 00:54:35.881 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/""" - 302 null null 149.8852ms
+2025-06-28 00:54:35.941 +05:30 [Information] HTTP "GET" "/swagger/index.html" responded 200 in 57.7223 ms
+2025-06-28 00:54:35.942 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 64.1933ms
+2025-06-28 00:54:35.951 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-06-28 00:54:35.954 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/_vs/browserLink""" - null null
+2025-06-28 00:54:35.958 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/_framework/aspnetcore-browser-refresh.js""" - 200 16531 "application/javascript; charset=utf-8" 5.9738ms
+2025-06-28 00:54:36.031 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/v1/swagger.json""" - null null
+2025-06-28 00:54:36.031 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 77.4404ms
+2025-06-28 00:54:36.109 +05:30 [Information] HTTP "GET" "/swagger/v1/swagger.json" responded 200 in 75.3029 ms
+2025-06-28 00:54:36.110 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 79.2538ms
+2025-06-28 00:57:39.932 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - null null
+2025-06-28 00:57:39.988 +05:30 [Information] Executing endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-28 00:57:40.025 +05:30 [Information] Route matched with "{action = \"GetLatestLogs\", controller = \"Hello\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetLatestLogs()" on controller "CleanObservability.Demo.Controllers.HelloController" ("CleanObservability.Demo").
+2025-06-28 00:57:40.089 +05:30 [Information] Executed action "CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)" in 56.924ms
+2025-06-28 00:57:40.092 +05:30 [Information] Executed endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-28 00:57:40.200 +05:30 [Error] Unhandled exception caught: "No file provider has been configured to process the supplied file."
+System.InvalidOperationException: No file provider has been configured to process the supplied file.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.VirtualFileResultExecutor.GetFileInformation(VirtualFileResult result, IWebHostEnvironment hostingEnvironment)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.VirtualFileResultExecutor.ExecuteAsync(ActionContext context, VirtualFileResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at CleanObservability.WebAPI.Middleware.GlobalExceptionMiddleware.Invoke(HttpContext context) in D:\CleanObservability\CleanObservability.Demo\Middlewares\GlobalExceptionMiddleware.cs:line 22
+2025-06-28 00:57:40.263 +05:30 [Error] HTTP "GET" "/Hello/logs/latest" responded 500 in 275.1184 ms
+2025-06-28 00:57:40.264 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - 500 null "application/json" 333.2159ms
+2025-06-28 00:57:44.308 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - null null
+2025-06-28 00:57:44.314 +05:30 [Information] Executing endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-28 00:57:44.318 +05:30 [Information] Route matched with "{action = \"GetLatestLogs\", controller = \"Hello\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetLatestLogs()" on controller "CleanObservability.Demo.Controllers.HelloController" ("CleanObservability.Demo").
+2025-06-28 00:57:44.381 +05:30 [Information] Executed action "CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)" in 62.0871ms
+2025-06-28 00:57:44.387 +05:30 [Information] Executed endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-28 00:57:44.438 +05:30 [Error] Unhandled exception caught: "No file provider has been configured to process the supplied file."
+System.InvalidOperationException: No file provider has been configured to process the supplied file.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.VirtualFileResultExecutor.GetFileInformation(VirtualFileResult result, IWebHostEnvironment hostingEnvironment)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.VirtualFileResultExecutor.ExecuteAsync(ActionContext context, VirtualFileResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at CleanObservability.WebAPI.Middleware.GlobalExceptionMiddleware.Invoke(HttpContext context) in D:\CleanObservability\CleanObservability.Demo\Middlewares\GlobalExceptionMiddleware.cs:line 22
+2025-06-28 00:57:44.442 +05:30 [Error] HTTP "GET" "/Hello/logs/latest" responded 500 in 128.0059 ms
+2025-06-28 00:57:44.442 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - 500 null "application/json" 135.7101ms
+2025-06-28 00:58:47.623 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - null null
+2025-06-28 00:58:47.629 +05:30 [Information] Executing endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-28 00:58:47.629 +05:30 [Information] Route matched with "{action = \"GetLatestLogs\", controller = \"Hello\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetLatestLogs()" on controller "CleanObservability.Demo.Controllers.HelloController" ("CleanObservability.Demo").
+2025-06-28 00:58:47.676 +05:30 [Information] Executed action "CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)" in 46.0584ms
+2025-06-28 00:58:47.677 +05:30 [Information] Executed endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-28 00:58:47.698 +05:30 [Error] Unhandled exception caught: "No file provider has been configured to process the supplied file."
+System.InvalidOperationException: No file provider has been configured to process the supplied file.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.VirtualFileResultExecutor.GetFileInformation(VirtualFileResult result, IWebHostEnvironment hostingEnvironment)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.VirtualFileResultExecutor.ExecuteAsync(ActionContext context, VirtualFileResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at CleanObservability.WebAPI.Middleware.GlobalExceptionMiddleware.Invoke(HttpContext context) in D:\CleanObservability\CleanObservability.Demo\Middlewares\GlobalExceptionMiddleware.cs:line 22
+2025-06-28 00:58:47.700 +05:30 [Error] HTTP "GET" "/Hello/logs/latest" responded 500 in 71.2488 ms
+2025-06-28 00:58:47.700 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - 500 null "application/json" 77.9216ms
+2025-06-28 00:58:50.281 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - null null
+2025-06-28 00:58:50.282 +05:30 [Information] Executing endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-28 00:58:50.284 +05:30 [Information] Route matched with "{action = \"GetLatestLogs\", controller = \"Hello\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetLatestLogs()" on controller "CleanObservability.Demo.Controllers.HelloController" ("CleanObservability.Demo").
+2025-06-28 00:58:50.352 +05:30 [Information] Executed action "CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)" in 67.8892ms
+2025-06-28 00:58:50.358 +05:30 [Information] Executed endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-28 00:58:50.418 +05:30 [Error] Unhandled exception caught: "No file provider has been configured to process the supplied file."
+System.InvalidOperationException: No file provider has been configured to process the supplied file.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.VirtualFileResultExecutor.GetFileInformation(VirtualFileResult result, IWebHostEnvironment hostingEnvironment)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.VirtualFileResultExecutor.ExecuteAsync(ActionContext context, VirtualFileResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at CleanObservability.WebAPI.Middleware.GlobalExceptionMiddleware.Invoke(HttpContext context) in D:\CleanObservability\CleanObservability.Demo\Middlewares\GlobalExceptionMiddleware.cs:line 22
+2025-06-28 00:58:50.421 +05:30 [Error] HTTP "GET" "/Hello/logs/latest" responded 500 in 139.2564 ms
+2025-06-28 00:58:50.472 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - 500 null "application/json" 189.5949ms
+2025-06-28 01:05:22.744 +05:30 [Information] User profile is available. Using '"C:\Users\akash\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-28 01:05:23.318 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/""" - null null
+2025-06-28 01:05:23.347 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2025-06-28 01:05:23.348 +05:30 [Information] Hosting environment: "Development"
+2025-06-28 01:05:23.348 +05:30 [Information] Content root path: "D:\CleanObservability\CleanObservability.Demo"
+2025-06-28 01:05:23.426 +05:30 [Information] Executing endpoint '"HTTP: GET /"'
+2025-06-28 01:05:23.433 +05:30 [Information] Executing RedirectResult, redirecting to "/swagger".
+2025-06-28 01:05:23.434 +05:30 [Information] Executed endpoint '"HTTP: GET /"'
+2025-06-28 01:05:23.436 +05:30 [Information] HTTP "GET" "/" responded 302 in 26.6802 ms
+2025-06-28 01:05:23.462 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/""" - 302 null null 152.8576ms
+2025-06-28 01:05:23.472 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/index.html""" - null null
+2025-06-28 01:05:23.541 +05:30 [Information] HTTP "GET" "/swagger/index.html" responded 200 in 64.4898 ms
+2025-06-28 01:05:23.543 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 71.348ms
+2025-06-28 01:05:23.554 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/_vs/browserLink""" - null null
+2025-06-28 01:05:23.554 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-06-28 01:05:23.562 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/_framework/aspnetcore-browser-refresh.js""" - 200 16531 "application/javascript; charset=utf-8" 7.3568ms
+2025-06-28 01:05:23.625 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 71.4372ms
+2025-06-28 01:05:23.626 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/v1/swagger.json""" - null null
+2025-06-28 01:05:23.712 +05:30 [Information] HTTP "GET" "/swagger/v1/swagger.json" responded 200 in 84.2824 ms
+2025-06-28 01:05:23.714 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 87.6403ms
+2025-06-28 01:52:39.708 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - null null
+2025-06-28 01:52:39.761 +05:30 [Information] Executing endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-28 01:52:39.857 +05:30 [Information] Route matched with "{action = \"GetLatestLogs\", controller = \"Hello\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetLatestLogs()" on controller "CleanObservability.Demo.Controllers.HelloController" ("CleanObservability.Demo").
+2025-06-28 01:52:39.916 +05:30 [Information] Executed action "CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)" in 48.9494ms
+2025-06-28 01:52:39.918 +05:30 [Information] Executed endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-28 01:52:40.032 +05:30 [Error] Unhandled exception caught: "No file provider has been configured to process the supplied file."
+System.InvalidOperationException: No file provider has been configured to process the supplied file.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.VirtualFileResultExecutor.GetFileInformation(VirtualFileResult result, IWebHostEnvironment hostingEnvironment)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.VirtualFileResultExecutor.ExecuteAsync(ActionContext context, VirtualFileResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at CleanObservability.WebAPI.Middleware.GlobalExceptionMiddleware.Invoke(HttpContext context) in D:\CleanObservability\CleanObservability.Demo\Middlewares\GlobalExceptionMiddleware.cs:line 22
+2025-06-28 01:52:40.077 +05:30 [Error] HTTP "GET" "/Hello/logs/latest" responded 500 in 316.6186 ms
+2025-06-28 01:52:40.078 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - 500 null "application/json" 372.4868ms
+2025-06-28 01:53:52.354 +05:30 [Information] User profile is available. Using '"C:\Users\akash\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-28 01:53:53.061 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/""" - null null
+2025-06-28 01:53:53.081 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2025-06-28 01:53:53.085 +05:30 [Information] Hosting environment: "Development"
+2025-06-28 01:53:53.114 +05:30 [Information] Content root path: "D:\CleanObservability\CleanObservability.Demo"
+2025-06-28 01:53:53.182 +05:30 [Information] Executing endpoint '"HTTP: GET /"'
+2025-06-28 01:53:53.192 +05:30 [Information] Executing RedirectResult, redirecting to "/swagger".
+2025-06-28 01:53:53.193 +05:30 [Information] Executed endpoint '"HTTP: GET /"'
+2025-06-28 01:53:53.195 +05:30 [Information] HTTP "GET" "/" responded 302 in 31.2522 ms
+2025-06-28 01:53:53.250 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/index.html""" - null null
+2025-06-28 01:53:53.253 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/""" - 302 null null 201.1991ms
+2025-06-28 01:53:53.309 +05:30 [Information] HTTP "GET" "/swagger/index.html" responded 200 in 53.5169 ms
+2025-06-28 01:53:53.311 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 61.3701ms
+2025-06-28 01:53:53.315 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-06-28 01:53:53.322 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/_framework/aspnetcore-browser-refresh.js""" - 200 16531 "application/javascript; charset=utf-8" 5.2532ms
+2025-06-28 01:53:53.322 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/_vs/browserLink""" - null null
+2025-06-28 01:53:53.373 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 51.189ms
+2025-06-28 01:53:53.410 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/v1/swagger.json""" - null null
+2025-06-28 01:53:53.490 +05:30 [Information] HTTP "GET" "/swagger/v1/swagger.json" responded 200 in 77.5190 ms
+2025-06-28 01:53:53.491 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 81.2025ms
+2025-06-28 01:54:37.749 +05:30 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - null null
+2025-06-28 01:54:37.755 +05:30 [Information] Executing endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-28 01:54:37.804 +05:30 [Information] Route matched with "{action = \"GetLatestLogs\", controller = \"Hello\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetLatestLogs()" on controller "CleanObservability.Demo.Controllers.HelloController" ("CleanObservability.Demo").
+2025-06-28 01:54:37.887 +05:30 [Information] Executed action "CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)" in 75.7381ms
+2025-06-28 01:54:37.890 +05:30 [Information] Executed endpoint '"CleanObservability.Demo.Controllers.HelloController.GetLatestLogs (CleanObservability.Demo)"'
+2025-06-28 01:54:37.984 +05:30 [Error] Unhandled exception caught: "No file provider has been configured to process the supplied file."
+System.InvalidOperationException: No file provider has been configured to process the supplied file.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.VirtualFileResultExecutor.GetFileInformation(VirtualFileResult result, IWebHostEnvironment hostingEnvironment)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.VirtualFileResultExecutor.ExecuteAsync(ActionContext context, VirtualFileResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at CleanObservability.WebAPI.Middleware.GlobalExceptionMiddleware.Invoke(HttpContext context) in D:\CleanObservability\CleanObservability.Demo\Middlewares\GlobalExceptionMiddleware.cs:line 22
+2025-06-28 01:54:38.013 +05:30 [Error] HTTP "GET" "/Hello/logs/latest" responded 500 in 257.7571 ms
+2025-06-28 01:54:38.014 +05:30 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:44360""""/Hello/logs/latest""" - 500 null "application/json" 265.1673ms

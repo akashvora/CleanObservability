@@ -1,0 +1,23 @@
+# Ignore user- and system-specific files
+.vs/
+*.user
+*.suo
+
+# Build artifacts
+bin/
+obj/
+TestResults/
+
+# Logs and temp files
+*.log
+*.tmp
+*.DS_Store
+
+# Observability noise
+CleanObservability.Demo/docker/certs/
+CleanObservability.Demo/docker/positions.yaml
+
+# Others
+.env
+*.pfx
+*.key

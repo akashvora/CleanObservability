@@ -1,0 +1,80 @@
+﻿version: "3.9"
+
+services:
+  loki:
+    image: grafana/loki:latest
+    ports:
+      - "3100:3100"
+    command: -config.file=/etc/loki/local-config.yaml
+    networks:
+      - loki
+
+  promtail:
+    # image: grafana/promtail:latest
+    image: grafana/promtail:2.9.3   # ✅ explicitly use a version that supports http_config
+    volumes:
+      # - /var/log:/var/log
+      - ./promtail.yaml:/etc/promtail/config.yml
+      # - ./certs:/etc/promtail/certs    # ONLY Promtail certs go here
+      - ./certs/promtail:/etc/promtail/certs   # ✅ updated path
+      # - ./certs:/etc/grafana/certs
+      - D:/MyLogs:/var/log/app    
+      - ./positions.yaml:/etc/promtail/positions.yaml 
+    command: -config.file=/etc/promtail/config.yml
+    networks:
+      - loki
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./grafana.ini:/etc/grafana/grafana.ini
+      # - ./certs:/etc/grafana/certs      # ONLY Grafana certs go here
+      - ./certs/grafana:/etc/grafana/certs     # ✅ updated path   # ONLY Grafana certs go here
+    environment:
+      - GF_PATHS_PROVISIONING=/etc/grafana/provisioning
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_FEATURE_TOGGLES_ENABLE=alertingSimplifiedRouting,alertingQueryAndExpressionsStepMode
+    entrypoint:
+      - sh
+      - -euc
+      - |
+        mkdir -p /etc/grafana/provisioning/datasources
+        cat <<EOF > /etc/grafana/provisioning/datasources/ds.yaml
+        apiVersion: 1
+        datasources:
+        - name: Loki
+          type: loki
+          access: proxy
+          orgId: 1
+          url: http://loki:3100
+          basicAuth: false
+          isDefault: true
+          version: 1
+          editable: false
+        EOF
+        /run.sh
+    networks:
+      - loki
+
+  seq:
+    image: datalust/seq
+    container_name: seq
+    ports:
+      - "5341:80"
+    environment:
+      - ACCEPT_EULA=Y
+      - SEQ_FIRSTRUN_ADMINPASSWORD=dev@2030
+      # - SEQ_FIRSTRUN_NOAUTHENTICATION=true
+
+
+    volumes:
+      - seq-data:/data
+
+networks:
+  loki:
+
+volumes:
+  seq-data:
