@@ -6,6 +6,10 @@
 ## has more thorough IDE-specific entries.
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/Dotnet.gitignore
+# Ignore user- and system-specific files
+.vs/
+*.user
+*.suo
 
 # Build results
 [Dd]ebug/
@@ -27,7 +31,15 @@ bld/
 project.lock.json
 project.fragment.lock.json
 artifacts/
+# Build artifacts
+bin/
+obj/
+TestResults/
 
+# Logs and temp files
+*.log
+*.tmp
+*.DS_Store
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt
 
@@ -35,6 +47,9 @@ ScaffoldingReadMe.txt
 *.nupkg
 # NuGet Symbol Packages
 *.snupkg
+# Observability noise
+CleanObservability.Demo/docker/certs/
+CleanObservability.Demo/docker/positions.yaml
 
 # Others
 ~$*
@@ -52,6 +67,10 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+.env
+*.pfx
+*.key
+/CleanObservability.Demo/Logs/2025/log-2025-07-03.txt
 /structure.txt
 /CleanObservability.Demo/CleanObservability.Demo.csproj.user
 /.vs
